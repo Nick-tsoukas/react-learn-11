@@ -103,4 +103,70 @@ class Slot extends React.Component {
       )
   }
 } 
+
+// friend component looping in jsx 
+class App extends React.Component {
+    render() {
+        return (
+        <div>
+           <h1>Friend App</h1>
+           < Friend
+           name="nick"
+           hobbies={['Running', 'Reading', "Swimming"]}
+            />
+            <Friend
+            name="Mike"
+            hobbies={['Gaming', 'Hiking']}
+            />
+        </div>
+        )
+    }
+} 
+
+// friend component
+class Friend extends React.Component {
+    render() {
+        const { name, hobbies } = this.props;
+        return (
+            <div>
+                <p>This is a friend component</p>
+                 <p>{name}</p>
+                 <ul>
+                     {
+                         hobbies.map(m => {
+                             return (
+                                 <li>
+                                     <h2>{m}</h2>
+                                 </li>
+                             )
+                         })
+                     }
+                 </ul>
+            </div>
+        )
+    }
+}
+
+// Adding static props right above the render function
+class Hello extends React.Component {
+    static defaultProps = {
+        from : "Anonymous"
+    }
+    render() {
+        return (
+        <div>
+            <p>Hi {this.props.to} from {this.props.from}</p>
+            <img style={{width: "300px"}} src={this.props.img} />
+        </div>
+        )
+    }
+} 
 ```
+
+Add inline css through passing a object to the style attribute example ....
+best practice is to store style in variable at top of the component to clean up the code
+class names should be named after the component like 
+.Hello 
+.Hello-winner 
+className={winner ? 'win' : 'lose'} using a ternary operator for dynamic class names
+<h1 style={{color: 'red'}}></h1>

@@ -2,15 +2,13 @@ class App extends React.Component {
     render() {
         return (
         <div>
-           <h1>Friend App</h1>
-           < Friend
-           name="nick"
-           hobbies={['Running', 'Reading', "Swimming"]}
-            />
-            <Friend
-            name="Mike"
-            hobbies={['Gaming', 'Hiking']}
-            />
+          <Hello 
+          to="Nick"
+          from="John"
+          />
+          <Hello 
+          to="Jerry"
+          />
         </div>
         )
     }
