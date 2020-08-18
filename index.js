@@ -1,11 +1,15 @@
 function getNumber(){
-    return Math.floor(Math.random() * 100);
+    return Math.floor(Math.random() * 10) + 1;
 }
 
 class NumPicker extends React.Component {
     render() {
+        let num = getNumber();
         return (
-            <h1>Your number is .... { getNumber() }</h1>
+            <div>
+            <h1>Your number is .... { num }</h1>
+            <p>{num === 7 ? 'Congrats you got the lucky number': 'Sorry your number is unlucky'}</p>
+            </div>
         )
     }
 }
