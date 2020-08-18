@@ -170,3 +170,8 @@ class names should be named after the component like
 .Hello-winner 
 className={winner ? 'win' : 'lose'} using a ternary operator for dynamic class names
 <h1 style={{color: 'red'}}></h1>
+
+
+#### notes 
+
+    - adding images by using import image from "./imagepath"
