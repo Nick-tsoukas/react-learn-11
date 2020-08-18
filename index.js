@@ -2,10 +2,15 @@ class App extends React.Component {
     render() {
         return (
         <div>
-            <h1>The Slot Machine</h1>
-            <Slot s1="x" s2="y" s3="y" />
-            <Slot s1="x" s2="y" s3="y" />
-            <Slot s1="x" s2="x" s3="x" />
+           <h1>Friend App</h1>
+           < Friend
+           name="nick"
+           hobbies={['Running', 'Reading', "Swimming"]}
+            />
+            <Friend
+            name="Mike"
+            hobbies={['Gaming', 'Hiking']}
+            />
         </div>
         )
     }
